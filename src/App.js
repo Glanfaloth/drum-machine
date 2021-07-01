@@ -65,7 +65,7 @@ export default function App() {
       />
 
       <div className="logo">
-        <div className="inner-logo ">{"FCC DRUM MACHINE"}</div>
+        <div className="inner-logo ">{"DRUM MACHINE"}</div>
         <i className="inner-logo fa fa-free-code-camp" />
       </div>
 
