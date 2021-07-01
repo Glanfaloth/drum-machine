@@ -2,6 +2,8 @@ import "./App.css";
 import React, { useState } from "react";
 import PadBank from "./components/PadBank";
 import Bank from "./components/Bank";
+import Form from "react-bootstrap/Form";
+import Switch from "react-switch";
 
 const bankOne = Bank(1);
 const bankTwo = Bank(2);
@@ -47,9 +49,6 @@ export default function App() {
     setDisplay(String.fromCharCode(160));
   }
 
-  const powerSlider = power ? { float: "right" } : { float: "left" };
-  const bankSlider =
-    currentPadBank === bankOne ? { float: "left" } : { float: "right" };
   const clips = [].slice.call(document.getElementsByClassName("clip"));
   clips.forEach((sound) => {
     sound.volume = sliderVal;
@@ -72,10 +71,14 @@ export default function App() {
       <div className="controls-container">
         <div className="control">
           <p>Power</p>
-          <div className="select" onClick={powerControl}>
-            <div className="inner" style={powerSlider} />
-          </div>
+          <Switch
+            onChange={powerControl}
+            checked={power}
+            onColor="#fab1a0"
+            onHandleColor="#00b894"
+          />
         </div>
+
         <p id="display">{display}</p>
         <div className="volume-slider">
           <input
@@ -89,9 +92,16 @@ export default function App() {
         </div>
         <div className="control">
           <p>Bank</p>
-          <div className="select" onClick={selectBank}>
-            <div className="inner" style={bankSlider} />
-          </div>
+          <Switch
+            onChange={selectBank}
+            checked={currentPadBank === bankOne}
+            onColor="#fab1a0"
+            offColor="#fab1a0"
+            onHandleColor="#00b894"
+            offHandleColor="#00b894"
+            uncheckedIcon=""
+            checkedIcon=""
+          />
         </div>
       </div>
     </div>

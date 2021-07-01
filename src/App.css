@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Russo+One");
+
 :root {
   --padWidth: 100px;
   --padHeight: 80px;
@@ -7,7 +8,7 @@ body {
   font-family: Russo One;
   user-select: none;
   background-color: grey;
-  /* background-image: url(https://media.giphy.com/media/IY6aaObBmN5Je/giphy.gif); */
+  background-image: url(https://media.giphy.com/media/IY6aaObBmN5Je/giphy.gif);
 }
 
 #root {
@@ -54,24 +55,6 @@ body {
   margin-bottom: 0;
 }
 
-.controls-container .control .select {
-  margin: auto;
-  border: 1px solid black;
-  width: 50px;
-  height: 20px;
-  padding: 1px;
-  background-color: black;
-  
-}
-
-.controls-container .control .select .inner {
-  width: 23px;
-  height: 19px;
-  background: blue;
-  border: 1px solid black;
-  box-sizing: border-box;
-  cursor: pointer;
-}
 
 .controls-container #display {
   width: 200px;
