@@ -65,7 +65,7 @@ export default function App() {
 
       <div className="logo">
         <div className="inner-logo ">{"DRUM MACHINE"}</div>
-        <i className="inner-logo fa fa-free-code-camp" />
+        <i className="inner-logo fa fa-rocket" />
       </div>
 
       <div className="controls-container">
@@ -84,13 +84,17 @@ export default function App() {
         <Form>
           <Form.Group controlId="formBasicRange">
             <Form.Label>Volume</Form.Label>
-            <Form.Control max="1"
-            min="0"
-            onChange={adjustVolume}
-            step="0.01" type="range" value={sliderVal}/>
+            <Form.Control
+              max="1"
+              min="0"
+              onChange={adjustVolume}
+              step="0.01"
+              type="range"
+              value={sliderVal}
+            />
           </Form.Group>
         </Form>
-        
+
         <div className="control">
           <p>Bank</p>
           <Switch

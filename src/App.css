@@ -6,8 +6,6 @@
 }
 body {
   font-family: Russo One;
-  user-select: none;
-  background-color: grey;
   background-image: url(https://media.giphy.com/media/IY6aaObBmN5Je/giphy.gif);
 }
 
@@ -19,11 +17,12 @@ body {
 }
 
 .inner-container {
-  outline: 5px solid orange;
+  outline: 10px solid #fab1a0;
   position: relative;
-  width: 660px;
+  width: 60vw;
   text-align: center;
-  background-color: grey;
+  background-color: rgba(0, 184, 148, 0.5);
+  font-weight: bold;
 }
 
 .logo {
@@ -35,7 +34,6 @@ body {
 .logo .inner-logo {
   display: inline-block;
   font-style: italic;
-  font-weight: bold;
   font-size: 20px;
 }
 
@@ -52,16 +50,17 @@ body {
 }
 
 .controls-container .control p {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 
 .controls-container #display {
   width: 200px;
-  background-color: gray;
+  background-color: #fab1a0;
   margin: 15px auto;
   padding: 15px;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .outer-select {
@@ -80,10 +79,4 @@ body {
   border: 1px solid black;
   box-sizing: border-box;
   cursor: pointer;
-}
-
-@media screen and (max-width: 650px) {
-  .inner-container {
-    transform: scale(0.7);
-  }
 }
