@@ -80,16 +80,17 @@ export default function App() {
         </div>
 
         <p id="display">{display}</p>
-        <div className="volume-slider">
-          <input
-            max="1"
+
+        <Form>
+          <Form.Group controlId="formBasicRange">
+            <Form.Label>Volume</Form.Label>
+            <Form.Control max="1"
             min="0"
             onChange={adjustVolume}
-            step="0.01"
-            type="range"
-            value={sliderVal}
-          />
-        </div>
+            step="0.01" type="range" value={sliderVal}/>
+          </Form.Group>
+        </Form>
+        
         <div className="control">
           <p>Bank</p>
           <Switch
