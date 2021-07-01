@@ -1,41 +1,34 @@
 import React from "react";
 import DrumPad from "./DrumPad";
 
-class PadBank extends React.Component {
-    constructor(props) {
-      super(props);
-    }
-    render() {
+export default function PadBank({currentPadBank, power, updateDisplay}) {
       let padBank;
-      if (this.props.power) {
-        padBank = this.props.currentPadBank.map((drumObj, i, padBankArr) => {
+      if (power) {
+        padBank = currentPadBank.map((drumObj, i, padBankArr) => {
           return (
             <DrumPad
               clip={padBankArr[i].url}
               clipId={padBankArr[i].id}
               keyCode={padBankArr[i].keyCode}
               keyTrigger={padBankArr[i].keyTrigger}
-              power={this.props.power}
-              updateDisplay={this.props.updateDisplay}
+              power={power}
+              updateDisplay={updateDisplay}
             />
           );
         });
       } else {
-        padBank = this.props.currentPadBank.map((drumObj, i, padBankArr) => {
+        padBank = currentPadBank.map((drumObj, i, padBankArr) => {
           return (
             <DrumPad
               clip='#'
               clipId={padBankArr[i].id}
               keyCode={padBankArr[i].keyCode}
               keyTrigger={padBankArr[i].keyTrigger}
-              power={this.props.power}
-              updateDisplay={this.props.updateDisplay}
+              power={power}
+              updateDisplay={updateDisplay}
             />
           );
         });
       }
       return <div className='pad-bank'>{padBank}</div>;
-    }
   }
-
-export default PadBank;
