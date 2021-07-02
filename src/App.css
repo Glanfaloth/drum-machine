@@ -6,7 +6,8 @@
 }
 body {
   font-family: Russo One;
-  background-image: url(https://media.giphy.com/media/IY6aaObBmN5Je/giphy.gif);
+  background-image: url(https://glanfaloth.github.io/projects/freecodecamp/imgs/drum.gif);
+  background-repeat: no-repeat;
 }
 
 #root {
