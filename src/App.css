@@ -17,9 +17,9 @@ body {
 }
 
 .inner-container {
+  display: flex;
   outline: 10px solid #fab1a0;
   position: relative;
-  width: 60vw;
   text-align: center;
   background-color: rgba(0, 184, 148, 0.5);
   font-weight: bold;
@@ -39,8 +39,8 @@ body {
 
 .controls-container {
   width: 240px;
-  height: var(--padHeight) * 3 + 32;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   margin: 40px 20px 0 10px;
   vertical-align: top;
 }
@@ -63,20 +63,18 @@ body {
   border-radius: 10px;
 }
 
-.outer-select {
-  margin: auto;
-  border: 1px solid black;
-  width: 50px;
-  height: 20px;
-  padding: 1px;
-  background-color: black;
+.pad-bank {
+  width: 3 * var(--padWidth);
+  margin: 20px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.inner-select {
-  width: 23px;
-  height: 19px;
-  background: blue;
-  border: 1px solid black;
-  box-sizing: border-box;
-  cursor: pointer;
+.pad-bank .drum-pad {
+  width: var(--padWidth);
+  height: var(--padHeight);
+  margin-right: 10px;
+  border-radius: 5px;
+  padding-top: 35px;
 }

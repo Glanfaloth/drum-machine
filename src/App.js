@@ -63,12 +63,11 @@ export default function App() {
         updateDisplay={displayClipName}
       />
 
-      <div className="logo">
-        <div className="inner-logo ">{"DRUM MACHINE"}</div>
-        <i className="inner-logo fa fa-rocket" />
-      </div>
-
       <div className="controls-container">
+        <div className="logo">
+          <div className="inner-logo ">{"DRUM MACHINE"}</div>
+          <i className="inner-logo fa fa-rocket" />
+        </div>
         <div className="control">
           <p>Power</p>
           <Switch

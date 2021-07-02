@@ -28,7 +28,7 @@ export default function DrumPad({
     updateDisplay(clipId.replace(/-/g, " "));
   }
   return (
-    <Button variant="primary" id={clipId} onClick={playSound} disabled={!power}>
+    <Button variant="primary" id={clipId} onClick={playSound} disabled={!power} className='drum-pad'>
       <audio className="clip" id={keyTrigger} src={clip} />
       {keyTrigger}
     </Button>
