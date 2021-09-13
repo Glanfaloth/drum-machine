@@ -1,4 +1,4 @@
-export default function Bank(type) {
+export default function Bank(type: number) {
   switch (type) {
     case 1:
       return [

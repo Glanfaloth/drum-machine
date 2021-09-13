@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import PadBank from "./components/PadBank";
-import Bank from "./components/Bank";
+import Bank from "./components/Bank.tsx";
 import Form from "react-bootstrap/Form";
 import Switch from "react-switch";
 
